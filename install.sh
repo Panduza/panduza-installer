@@ -93,6 +93,9 @@ function generic_install() {
 if [[ $osv == "Ubuntu_22.04" ]]; then
     apt-get install -y python3 python3-pip python3-venv mosquitto
     generic_install
+
+    wget https://raw.githubusercontent.com/Panduza/panduza-installer/main/assets/85-brltty.rules && mv /usr/lib/udev/rules.d/85-brltty.rules
+
     exit 0
 fi
 
@@ -103,6 +106,8 @@ fi
 if [[ $id == "Ubuntu" ]]; then
     apt-get install -y python3 python3-pip python3-venv mosquitto
     generic_install
+
+
     exit 0
 fi
 
