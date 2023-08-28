@@ -20,7 +20,7 @@ PYTHON_MODULES=(
     PyHamcrest==2.0.4 \
     "git+https://github.com/Panduza/panduza-py.git@0.1.0#egg=panduza&subdirectory=client/" \
     "git+https://github.com/Panduza/panduza-py.git@0.1.0#egg=panduza_platform&subdirectory=platform/" \
-    "git+https://github.com/Panduza/panduza-admin-dashboard@0.1.0" \
+    "git+https://github.com/Panduza/panduza-admin-dashboard@main" \
     )
 
 # ===================================================================
