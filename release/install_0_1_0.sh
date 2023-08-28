@@ -120,7 +120,7 @@ echo ""
 # --------------------------
 
 if [[ $osv == "Ubuntu_22.04" ]]; then
-    apt-get install -y python3 python3-pip python3-venv mosquitto
+    apt-get install -y git python3 python3-pip python3-venv mosquitto
     generic_install
 
     wget ${ASSETS_URL}/85-brltty.rules
