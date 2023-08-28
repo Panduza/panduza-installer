@@ -5,7 +5,7 @@
 
 PYTHON_VENV_PATH=/usr/local/bin/panduza/venv
 
-ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/0.1.0/assets"
+ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/main/assets"
 
 PYTHON_MODULES=(
     numpy==1.24.2 \
