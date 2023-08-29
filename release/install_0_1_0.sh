@@ -5,7 +5,7 @@
 
 PYTHON_VENV_PATH=/usr/local/bin/panduza/venv
 
-ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/main/assets"
+ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/0.1.0/assets"
 
 PYTHON_MODULES=(
     numpy==1.24.2 \
@@ -20,7 +20,7 @@ PYTHON_MODULES=(
     PyHamcrest==2.0.4 \
     "git+https://github.com/Panduza/panduza-py.git@0.1.0#egg=panduza&subdirectory=client/" \
     "git+https://github.com/Panduza/panduza-py.git@0.1.0#egg=panduza_platform&subdirectory=platform/" \
-    "git+https://github.com/Panduza/panduza-admin-dashboard@main" \
+    "git+https://github.com/Panduza/panduza-admin-dashboard@0.1.0" \
     )
 
 # ===================================================================
