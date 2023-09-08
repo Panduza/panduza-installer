@@ -3,9 +3,11 @@
 # ===================================================================
 # PARAMETERS
 
+CONFIGURATION="0.1.1"
+
 PYTHON_VENV_PATH=/usr/local/bin/panduza/venv
 
-ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/main/assets"
+ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/0.1.x/assets"
 
 PYTHON_MODULES=(
     numpy==1.24.2 \
@@ -18,9 +20,9 @@ PYTHON_MODULES=(
     pyudev==0.24.0 \
     pyusb==1.2.1 \
     PyHamcrest==2.0.4 \
-    "git+https://github.com/Panduza/panduza-py.git@main#egg=panduza&subdirectory=client/" \
-    "git+https://github.com/Panduza/panduza-py.git@main#egg=panduza_platform&subdirectory=platform/" \
-    "git+https://github.com/Panduza/panduza-admin-dashboard@main" \
+    "git+https://github.com/Panduza/panduza-py.git@0.1.0#egg=panduza&subdirectory=client/" \
+    "git+https://github.com/Panduza/panduza-py.git@0.1.0#egg=panduza_platform&subdirectory=platform/" \
+    "git+https://github.com/Panduza/panduza-admin-dashboard@0.1.1" \
     )
 
 # ===================================================================
@@ -125,6 +127,9 @@ if [[ $osv == "Ubuntu_22.04" ]]; then
 
     wget ${ASSETS_URL}/85-brltty.rules
     mv -f 85-brltty.rules /usr/lib/udev/rules.d/85-brltty.rules
+
+    wget ${ASSETS_URL}/mosquitto/mosquitto.conf
+    mv -f mosquitto.conf /etc/mosquitto/mosquitto.conf
 
     exit 0
 fi
