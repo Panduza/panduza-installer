@@ -7,7 +7,7 @@ CONFIGURATION="0.1.1"
 
 PYTHON_VENV_PATH=/usr/local/bin/panduza/venv
 
-ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/0.1.x/assets"
+ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/0.1.1/assets"
 
 PYTHON_MODULES=(
     numpy==1.24.2 \
@@ -20,8 +20,8 @@ PYTHON_MODULES=(
     pyudev==0.24.0 \
     pyusb==1.2.1 \
     PyHamcrest==2.0.4 \
-    "git+https://github.com/Panduza/panduza-py.git@0.1.0#egg=panduza&subdirectory=client/" \
-    "git+https://github.com/Panduza/panduza-py.git@0.1.0#egg=panduza_platform&subdirectory=platform/" \
+    "git+https://github.com/Panduza/panduza-py.git@0.1.1#egg=panduza&subdirectory=client/" \
+    "git+https://github.com/Panduza/panduza-py.git@0.1.1#egg=panduza_platform&subdirectory=platform/" \
     "git+https://github.com/Panduza/panduza-admin-dashboard@0.1.1" \
     )
 
@@ -138,13 +138,13 @@ fi
 # ManjaroLinux_23.0.0
 # --------------------------
 
-if [[ $osv == "ManjaroLinux_23.0.0" ]]; then
-    pacman -S python --noconfirm
-    pacman -S python-pip --noconfirm
-    pacman -S mosquitto --noconfirm
-    generic_install
-    exit 0
-fi
+# if [[ $osv == "ManjaroLinux_23.0.0" ]]; then
+#     pacman -S python --noconfirm
+#     pacman -S python-pip --noconfirm
+#     pacman -S mosquitto --noconfirm
+#     generic_install
+#     exit 0
+# fi
 
 # --------------------------
 # END
