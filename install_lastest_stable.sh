@@ -128,6 +128,9 @@ if [[ $osv == "Ubuntu_22.04" ]]; then
     wget ${ASSETS_URL}/85-brltty.rules
     mv -f 85-brltty.rules /usr/lib/udev/rules.d/85-brltty.rules
 
+    wget ${ASSETS_URL}/mosquitto/mosquitto.conf
+    mv -f mosquitto.conf /etc/mosquitto/mosquitto.conf
+
     exit 0
 fi
 
