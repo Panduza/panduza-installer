@@ -138,13 +138,13 @@ fi
 # ManjaroLinux_23.0.0
 # --------------------------
 
-if [[ $osv == "ManjaroLinux_23.0.0" ]]; then
-    pacman -S python --noconfirm
-    pacman -S python-pip --noconfirm
-    pacman -S mosquitto --noconfirm
-    generic_install
-    exit 0
-fi
+# if [[ $osv == "ManjaroLinux_23.0.0" ]]; then
+#     pacman -S python --noconfirm
+#     pacman -S python-pip --noconfirm
+#     pacman -S mosquitto --noconfirm
+#     generic_install
+#     exit 0
+# fi
 
 # --------------------------
 # END
