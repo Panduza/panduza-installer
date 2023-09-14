@@ -46,6 +46,7 @@ function install_systemctl_admin_service() {
     echo "User=root" >> ${service_panduza_admin_path}
     echo "ExecStart=${PYTHON_VENV_PATH}/bin/python3 ${path_to_admin_main}" >> ${service_panduza_admin_path}
     echo "ExecStop=/bin/kill $MAINPID" >> ${service_panduza_admin_path}
+    echo "TimeoutStopSec=1" >> ${service_panduza_admin_path}
     echo "[Install]" >> ${service_panduza_admin_path}
     echo "WantedBy=multi-user.target" >> ${service_panduza_admin_path}
 }
@@ -63,7 +64,7 @@ function install_systemctl_platform_service() {
     echo "[Service]" >> ${service_panduza_platform_path}
     echo "User=root" >> ${service_panduza_platform_path}
     echo "ExecStart=${PYTHON_VENV_PATH}/bin/python3 ${path_to_platform_main}" >> ${service_panduza_platform_path}
-    
+    # echo "TimeoutStopSec=10" >> ${service_panduza_admin_path}
     echo "[Install]" >> ${service_panduza_platform_path}
     echo "WantedBy=multi-user.target" >> ${service_panduza_platform_path}
 }
@@ -138,13 +139,13 @@ fi
 # ManjaroLinux_23.0.0
 # --------------------------
 
-if [[ $osv == "ManjaroLinux_23.0.0" ]]; then
-    pacman -S python --noconfirm
-    pacman -S python-pip --noconfirm
-    pacman -S mosquitto --noconfirm
-    generic_install
-    exit 0
-fi
+# if [[ $osv == "ManjaroLinux_23.0.0" ]]; then
+#     pacman -S python --noconfirm
+#     pacman -S python-pip --noconfirm
+#     pacman -S mosquitto --noconfirm
+#     generic_install
+#     exit 0
+# fi
 
 # --------------------------
 # END
