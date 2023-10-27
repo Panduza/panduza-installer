@@ -3,7 +3,7 @@
 # ===================================================================
 # PARAMETERS
 
-CONFIGURATION="0.2.0"
+CONFIGURATION="0.3.x"
 
 PYTHON_VENV_PATH=/usr/local/bin/panduza/venv
 
@@ -20,6 +20,8 @@ PYTHON_MODULES=(
     pyudev==0.24.0 \
     pyusb==1.2.1 \
     PyHamcrest==2.0.4 \
+    aiofiles==23.2.1 \
+    aiomonitor==0.6.0 \
     "git+https://github.com/Panduza/panduza-py.git@0.2.0#egg=panduza&subdirectory=client/" \
     "git+https://github.com/Panduza/panduza-py.git@0.2.0#egg=panduza_platform&subdirectory=platform/" \
     "git+https://github.com/Panduza/panduza-admin-dashboard@0.1.2" \
@@ -73,7 +75,7 @@ function install_systemctl_platform_service() {
 function generic_install() {
     rm -rf ${PYTHON_VENV_PATH}
 
-    python3 -m venv ${PYTHON_VENV_PATH}
+    python3.11 -m venv ${PYTHON_VENV_PATH}
 
     mkdir -p /etc/panduza/
 
@@ -123,7 +125,7 @@ echo ""
 # --------------------------
 
 if [[ $osv == "Ubuntu_22.04" ]]; then
-    apt-get install -y git python3 python3-pip python3-venv mosquitto
+    apt-get install -y git python3.11 python3-pip python3.11-venv mosquitto
     generic_install
 
     wget ${ASSETS_URL}/85-brltty.rules
