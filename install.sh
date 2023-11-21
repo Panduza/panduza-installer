@@ -11,7 +11,6 @@ ASSETS_URL="https://raw.githubusercontent.com/Panduza/panduza-installer/0.2.0/as
 
 PYTHON_MODULES=(
     numpy==1.24.2 \
-    nicegui==1.3.1 \
     colorama==0.4.6 \
     paho-mqtt==1.6.1 \
     pyftdi==0.54.0 \
@@ -22,6 +21,7 @@ PYTHON_MODULES=(
     PyHamcrest==2.0.4 \
     aiofiles==23.2.1 \
     aiomonitor==0.6.0 \
+    aioserial==1.3.1 \
     "git+https://github.com/Panduza/panduza-py.git@0.2.0#egg=panduza&subdirectory=client/" \
     "git+https://github.com/Panduza/panduza-py.git@0.2.0#egg=panduza_platform&subdirectory=platform/" \
     "git+https://github.com/Panduza/panduza-admin-dashboard@0.1.2" \
