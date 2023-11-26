@@ -1,0 +1,23 @@
+2023-11-26 15:20:24,598 | platform | ==========================================
+2023-11-26 15:20:24,598 | platform | = PANDUZA PYTHON PLATFORM          0.3.0 =
+2023-11-26 15:20:24,598 | platform | ==========================================
+2023-11-26 15:20:24,598 | platform | =
+2023-11-26 15:20:24,598 | platform | Register device builder: 'Hanmatek.Hm310t'
+2023-11-26 15:20:24,598 | platform | Register device builder: 'Panduza.FakeDioController'
+2023-11-26 15:20:24,598 | platform | Register device builder: 'Panduza.FakeBps'
+2023-11-26 15:20:24,598 | platform | Register device builder: 'Panduza.FakeRelayController'
+2023-11-26 15:20:24,599 | platform | Register device builder: 'Panduza.Server'
+2023-11-26 15:20:24,599 | platform | Register device builder: 'Panduza.FakeWebcam'
+2023-11-26 15:20:24,599 | platform | Register device builder: 'Ftdi.Ft232h_jtag'
+2023-11-26 15:20:24,599 | platform | Register device builder: 'Tenma.72-2710'
+2023-11-26 15:20:24,599 | platform | Register device builder: 'Korad.KA3005P'
+2023-11-26 15:20:24,599 | platform | =
+2023-11-26 15:20:24,601 | platform | platform run
+2023-11-26 15:20:24,602 | platform | EVENT LOOP RUN
+2023-11-26 15:20:24,602 | platform | Idle task start
+2023-11-26 15:20:24,602 | asyncio | Task exception was never retrieved
+future: <Task finished name='IDLE' coro=<Platform.__idle_task() done, defined at /usr/local/lib/python3.10/dist-packages/panduza_platform/core/platform.py:246> exception=AttributeError("module 'asyncio' has no attribute 'TaskGroup'")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/panduza_platform/core/platform.py", line 253, in __idle_task
+    async with asyncio.TaskGroup() as self.task_group:
+AttributeError: module 'asyncio' has no attribute 'TaskGroup'
