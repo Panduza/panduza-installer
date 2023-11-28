@@ -1,23 +1,62 @@
-2023-11-26 15:20:24,598 | platform | ==========================================
-2023-11-26 15:20:24,598 | platform | = PANDUZA PYTHON PLATFORM          0.3.0 =
-2023-11-26 15:20:24,598 | platform | ==========================================
-2023-11-26 15:20:24,598 | platform | =
-2023-11-26 15:20:24,598 | platform | Register device builder: 'Hanmatek.Hm310t'
-2023-11-26 15:20:24,598 | platform | Register device builder: 'Panduza.FakeDioController'
-2023-11-26 15:20:24,598 | platform | Register device builder: 'Panduza.FakeBps'
-2023-11-26 15:20:24,598 | platform | Register device builder: 'Panduza.FakeRelayController'
-2023-11-26 15:20:24,599 | platform | Register device builder: 'Panduza.Server'
-2023-11-26 15:20:24,599 | platform | Register device builder: 'Panduza.FakeWebcam'
-2023-11-26 15:20:24,599 | platform | Register device builder: 'Ftdi.Ft232h_jtag'
-2023-11-26 15:20:24,599 | platform | Register device builder: 'Tenma.72-2710'
-2023-11-26 15:20:24,599 | platform | Register device builder: 'Korad.KA3005P'
-2023-11-26 15:20:24,599 | platform | =
-2023-11-26 15:20:24,601 | platform | platform run
-2023-11-26 15:20:24,602 | platform | EVENT LOOP RUN
-2023-11-26 15:20:24,602 | platform | Idle task start
-2023-11-26 15:20:24,602 | asyncio | Task exception was never retrieved
-future: <Task finished name='IDLE' coro=<Platform.__idle_task() done, defined at /usr/local/lib/python3.10/dist-packages/panduza_platform/core/platform.py:246> exception=AttributeError("module 'asyncio' has no attribute 'TaskGroup'")>
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/dist-packages/panduza_platform/core/platform.py", line 253, in __idle_task
-    async with asyncio.TaskGroup() as self.task_group:
-AttributeError: module 'asyncio' has no attribute 'TaskGroup'
+2023-11-27 07:39:18,963 | platform | ==========================================
+2023-11-27 07:39:18,963 | platform | = PANDUZA PYTHON PLATFORM          0.3.0 =
+2023-11-27 07:39:18,963 | platform | ==========================================
+2023-11-27 07:39:18,963 | platform | =
+2023-11-27 07:39:18,964 | platform | Register device builder: 'Hanmatek.Hm310t'
+2023-11-27 07:39:18,964 | platform | Register device builder: 'Panduza.FakeDioController'
+2023-11-27 07:39:18,964 | platform | Register device builder: 'Panduza.FakeBps'
+2023-11-27 07:39:18,964 | platform | Register device builder: 'Panduza.FakeRelayController'
+2023-11-27 07:39:18,965 | platform | Register device builder: 'Panduza.Server'
+2023-11-27 07:39:18,965 | platform | Register device builder: 'Panduza.FakeWebcam'
+2023-11-27 07:39:18,965 | platform | Register device builder: 'Ftdi.Ft232h_jtag'
+2023-11-27 07:39:18,965 | platform | Register device builder: 'Tenma.72-2710'
+2023-11-27 07:39:18,966 | platform | Register device builder: 'Korad.KA3005P'
+2023-11-27 07:39:18,966 | platform | =
+2023-11-27 07:39:18,969 | platform | platform run
+2023-11-27 07:39:18,969 | platform | EVENT LOOP RUN
+2023-11-27 07:39:18,970 | platform | Idle task start
+2023-11-27 07:39:18,970 | platform | 1
+2023-11-27 07:39:18,970 | platform | Mount client 'primary'
+2023-11-27 07:39:18,971 | platform | Load '<core.mqtt_async_client.MqttAsyncClient object at 0x7fbfc12719d0>'
+2023-11-27 07:39:18,971 | platform | 2
+2023-11-27 07:39:18,971 | platform | Mount device '{'name': 'vmed', 'ref': 'Panduza.Server'}'
+2023-11-27 07:39:18,972 | server/vmed/device | Interface initialized
+2023-11-27 07:39:18,972 | platform | Load '<core.itf_device.InterfacePanduzaDevice object at 0x7fbfbfe8d690>'
+2023-11-27 07:39:18,972 | server/vmed/test | Interface initialized
+2023-11-27 07:39:18,972 | platform | Load '<devices.panduza.server.itf_platform.InterfacePanduzaPlatform object at 0x7fbfbfe8e110>'
+2023-11-27 07:39:18,972 | platform | 3
+2023-11-27 07:39:18,972 | platform | No default config defined at /etc/panduza/tree.json
+2023-11-27 07:39:18,973 | platform | load config:{}
+2023-11-27 07:39:18,973 | platform | [<devices.panduza.server.dev_server.DevicePanduzaServer object at 0x7fbfbfe8d790>]
+2023-11-27 07:39:19,074 | localhost:1883 | STATE CHANGE ::: None => init
+2023-11-27 07:39:19,077 | localhost:1883 | Socket opened
+2023-11-27 07:39:19,078 | localhost:1883 | Connecting...
+2023-11-27 07:39:19,078 | server/vmed/device | STATE CHANGE ::: None => connecting
+2023-11-27 07:39:19,078 | localhost:1883 | MSG_OUT %pza/server/vmed/device/atts/info% b'{"info": {"type": "device", "version": "0.0", "state": "connecting"}}' QOS=0
+2023-11-27 07:39:19,078 | server/vmed/test | STATE CHANGE ::: None => connecting
+2023-11-27 07:39:19,079 | localhost:1883 | MSG_OUT %pza/server/vmed/test/atts/info% b'{"info": {"type": "platform", "version": "0.0", "state": "connecting"}}' QOS=0
+2023-11-27 07:39:19,079 | localhost:1883 | misc_loop started
+2023-11-27 07:39:19,079 | localhost:1883 | Connected ! (0)
+2023-11-27 07:39:19,179 | localhost:1883 | STATE CHANGE ::: init => running
+2023-11-27 07:39:19,684 | server/vmed/device | STATE CHANGE ::: connecting => init
+2023-11-27 07:39:19,685 | localhost:1883 | MSG_OUT %pza/server/vmed/device/atts/info% b'{"info": {"type": "device", "version": "0.0", "state": "init"}}' QOS=0
+2023-11-27 07:39:19,685 | localhost:1883 | Register listener for topic 'pza'
+2023-11-27 07:39:19,685 | localhost:1883 | Register listener for topic 'pza/server/vmed/device/cmds/#'
+2023-11-27 07:39:19,685 | localhost:1883 | MSG_OUT %pza/server/vmed/device/atts/info% b'{"info": {"type": "device", "version": "0.0", "state": "init", "number_of_interfaces": 2}}' QOS=0
+2023-11-27 07:39:19,685 | localhost:1883 | MSG_OUT %pza/server/vmed/device/atts/identity% b'{"identity": {"family": "server", "model": "Server", "manufacturer": "Panduza"}}' QOS=0
+2023-11-27 07:39:19,685 | server/vmed/test | STATE CHANGE ::: connecting => init
+2023-11-27 07:39:19,685 | localhost:1883 | MSG_OUT %pza/server/vmed/test/atts/info% b'{"info": {"type": "platform", "version": "0.0", "state": "init"}}' QOS=0
+2023-11-27 07:39:19,685 | localhost:1883 | Register listener for topic 'pza'
+2023-11-27 07:39:19,685 | localhost:1883 | Register listener for topic 'pza/server/vmed/test/cmds/#'
+2023-11-27 07:39:19,685 | localhost:1883 | MSG_OUT %pza/server/vmed/test/atts/info% b'{"info": {"type": "platform", "version": "0.0", "state": "init", "dying_gasp": false}}' QOS=0
+2023-11-27 07:39:19,691 | localhost:1883 | subscribe topic 'pza'
+2023-11-27 07:39:19,691 | localhost:1883 | subscribe topic 'pza/server/vmed/device/cmds/#'
+2023-11-27 07:39:19,691 | localhost:1883 | subscribe topic 'pza/server/vmed/test/cmds/#'
+2023-11-27 07:39:19,786 | server/vmed/device | STATE CHANGE ::: init => run
+2023-11-27 07:39:19,787 | localhost:1883 | MSG_OUT %pza/server/vmed/device/atts/info% b'{"info": {"type": "device", "version": "0.0", "state": "run", "number_of_interfaces": 2}}' QOS=0
+2023-11-27 07:39:19,787 | server/vmed/test | STATE CHANGE ::: init => run
+2023-11-27 07:39:19,787 | localhost:1883 | MSG_OUT %pza/server/vmed/test/atts/info% b'{"info": {"type": "platform", "version": "0.0", "state": "run", "dying_gasp": false}}' QOS=0
+2023-11-27 07:39:20,687 | localhost:1883 | MSG_OUT %pza/server/vmed/test/atts/info% b'{"info": {"type": "platform", "version": "0.0", "state": "run", "dying_gasp": false, "interfaces": 2}}' QOS=0
+2023-11-27 07:39:20,688 | localhost:1883 | MSG_OUT %pza/server/vmed/test/atts/info% b'{"info": {"type": "platform", "version": "0.0", "state": "run", "dying_gasp": false, "interfaces": 2, "number_of_devices": 1}}' QOS=0
+2023-11-27 07:39:20,688 | localhost:1883 | MSG_OUT %pza/server/vmed/test/atts/dtree% b'{"dtree": {"name": "tree.json", "saved": true, "list": [], "content": {}}}' QOS=0
+2023-11-27 07:39:20,688 | localhost:1883 | MSG_OUT %pza/server/vmed/test/atts/devices% b'{"devices": {"hunting": false, "max": 0, "hunted": 0, "store": {"Hanmatek.Hm310t": {"settings_props": [{"name": "serial_port_name", "type": "string", "default": ""}], "instances": []}, "Panduza.FakeDioController": {"settings_props": [], "instances": []}, "Panduza.FakeBps": {"settings_props": [{"name": "number_of_channel", "type": "int"}], "instances": []}, "Panduza.FakeRelayController": {"settings_props": [], "instances": []}, "Panduza.Server": {"settings_props": [], "instances": []}, "Panduza.FakeWebcam": {"settings_props": [], "instances": []}, "Ftdi.Ft232h_jtag": {"settings_props": [], "instances": []}, "Tenma.72-2710": {"settings_props": [{"name": "usb_serial_short", "type": "string", "description": "USB serial number of the device", "default": ""}, {"name": "serial_port_name", "type": "string", "description": "Serial port name, better use the usb_serial_short", "default": ""}], "instances": []}, "Korad.KA3005P": {"settings_props": [{"name": "serial_port_name", "type": "string", "default": "/dev/ttyACM0"}], "instances": []}}}}' QOS=0
