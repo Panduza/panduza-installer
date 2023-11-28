@@ -1,0 +1,16 @@
+[Unit]
+Description=Panduza Services
+After=network.target
+PartOf=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+WorkingDirectory=/etc/panduza
+ExecStart=docker compose up -d --remove-orphans
+ExecStop=docker compose down
+
+[Install]
+WantedBy=multi-user.target
+
