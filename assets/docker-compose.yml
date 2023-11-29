@@ -1,8 +1,10 @@
 version: '3'
 
 services:
+
+  # Mqtt broker service
   # docker compose run --service-ports mosquitto
-  mosquitto:
+  mqttbroker:
     image: eclipse-mosquitto
     ports:
       - 1883:1883
@@ -11,13 +13,23 @@ services:
       - ./configs/mosquitto.conf:/mosquitto/config/mosquitto.conf
 
 
+  # Video stream service
   vstream:
-    image: alqutami/rtmp-hls:latest-alpine
+    image: bluenviron/mediamtx
     ports:
+      - 8554:8554
       - 1935:1935
+      - 8888:8888
+      - 8889:8889
+      - 8890:8890/udp
+      - 8189:8189/udp
+    environment:
+      - MTX_PROTOCOLS=tcp
+      - MTX_WEBRTCADDITIONALHOSTS=192.168.x.x
 
 
-  panduza-py-platform:
+  # Panduza platform service
+  platformpy:
     # image: ghcr.io/panduza/panduza-py-platform:latest
     # To use your local platform build
     image: local/panduza-py-platform
