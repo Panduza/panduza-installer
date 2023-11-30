@@ -33,6 +33,8 @@ services:
     # image: ghcr.io/panduza/panduza-py-platform:latest
     # To use your local platform build
     image: local/panduza-py-platform
+    # ports:
+    #   - 20101:20101
     privileged: true
     depends_on:
       - vstream
@@ -41,4 +43,6 @@ services:
     volumes:
       - .:/etc/panduza
       - /run/udev:/run/udev:ro
+    # environment:
+    #   - COVERAGE=1
 
