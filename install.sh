@@ -47,23 +47,23 @@ if [[ $osv == "Ubuntu_22.04" ]]; then
 
     sudo usermod -aG docker $USER
     
-    wget -P /usr/lib/udev/rules.d \
+    wget -N -P /usr/lib/udev/rules.d \
         ${ASSETS_URL}/85-brltty.rules
     
 fi
 
 # ---
 mkdir -p /etc/panduza
-wget -P /etc/panduza \
+wget -N -P /etc/panduza \
     ${ASSETS_URL}/docker-compose.yml
 
 # ---
 mkdir -p /etc/panduza/configs
-wget -P /etc/panduza/configs \
+wget -N -P /etc/panduza/configs \
     ${ASSETS_URL}/mosquitto.conf
 
 # ---
-wget -P /etc/systemd/system/ \
+wget -N -P /etc/systemd/system/ \
     ${ASSETS_URL}/panduza.service
 
 # ---

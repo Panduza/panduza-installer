@@ -8,7 +8,7 @@ services:
     image: eclipse-mosquitto
     ports:
       - 1883:1883
-      - 9001:9001
+      # - 9001:9001
     volumes:
       - ./configs/mosquitto.conf:/mosquitto/config/mosquitto.conf
 
@@ -36,10 +36,9 @@ services:
     privileged: true
     depends_on:
       - vstream
-      - mosquitto
+      - mqttbroker
     network_mode: host
     volumes:
       - .:/etc/panduza
       - /run/udev:/run/udev:ro
-    # command: bash
 
