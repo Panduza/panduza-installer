@@ -1,4 +1,4 @@
 # /etc/udev/rules.d/99-panduza.rules
 
 # Thorlabs PM100A
-SUBSYSTEMS=="usb", ACTION=="add", ATTRS{idVendor}=="1313", ATTRS{idProduct}=="8079", GROUP="usbtmc", MODE="0660", SYMLINK+="usbtmc-%s{serial}"
+SUBSYSTEMS=="usb", ACTION=="add", ATTRS{idVendor}=="1313", ATTRS{idProduct}=="8079", GROUP="usbtmc", MODE="0660", SYMLINK+="usbtmc-%s{idVendor}-%s{idProduct}-%s{serial}"
